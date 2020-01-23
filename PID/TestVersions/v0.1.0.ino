@@ -66,7 +66,7 @@ void loop() {
   Serial.print("\t");
   Serial.println(dir);
   error = degree;
-  if(error>-25){
+  if(error>-25 && error<0){
     analogWrite(5,(Kp/2)*PWM);
     analogWrite(6,0);
   }
@@ -74,7 +74,7 @@ void loop() {
     analogWrite(5,Kp*PWM);
     analogWrite(6,0);
   }
-  else if(error<25){
+  else if(error<25 && error>0){
     analogWrite(5,0);
     analogWrite(6,(Kp/2)*PWM);
   }
