@@ -2,6 +2,7 @@
 *
 * This code displays the rotation(in degrees) of the rotary encoder,
 * number of revolutions and direction of rotaion.
+* Proportional part of the PID control loop.
 *
 *         Pinout    Description     Arduino
 *         white --> phase A     --> digital pin number 3
@@ -13,7 +14,7 @@
 * --> Display direction 1 for anti-clockwise and 0 for clockwise rotation
 * --> positive rotation (in degrees) for clockwise and negative for anti-clockwise
 *     number of revolutions and pulse count.
-*
+* --> Proportional part of the PID control loop
 */
 
 #define PhaseAPin 3
